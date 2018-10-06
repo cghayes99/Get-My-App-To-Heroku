@@ -98,15 +98,15 @@ Next, enter in the name of your repo and click on "Search"
 
 ![](02-to-heroku.png)
 
-Heroku will find your repo and then click on "Connect"
+Heroku finds your repo, click on "Connect" to finish.
 
 ### Deploy
 
-Now you ready to deploy your application.  This will take a minute or two and you can watch Heroku working.  
-
-You can even setup automatic deployment if you with so when you make changes and push them to GitHub, Heroku  will automatically deploy your app.  Get comfortable with manual deploys first before trying automatic ones.
+You are ready to deploy your application.  This will take a minute or two and you can watch Heroku working.  
 
 ![](03-to-heroku.png)
+
+You can even setup automatic deployments.  When you make code changes and push them to GitHub, Heroku will automatically deploy your app for you.  Get comfortable with manual deploys first before trying automatic ones.
 
 ### View
 
