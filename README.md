@@ -45,11 +45,11 @@ Werkzeug==0.14.1
 
 ### Create the Procfile
 
-This file tells Heroku how to start and run your app.  Create a new file and name it ```Profile``` and save it in your project folder.  This is the same location as the requirements file and your Python application file.
+This file tells Heroku how to start and run your app.  Create a new file and name it ```Procfile``` and save it in your project folder.  This is the same location as the requirements file and your Python application file.
 
 ***Note:*** The Procfile does not have a file extension
 
-Update your new ```Profile``` with the following
+Update your new ```Procfile``` with the following
 
 ```
 web: gunicorn app:app
