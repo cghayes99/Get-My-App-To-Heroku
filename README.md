@@ -1,29 +1,30 @@
 # How to Get My App to Heroku
 
-To get your Python app deployed to Heroku is easier than you think.  You just need a few things to setup and configure to make it happen.
+To get your Python app deployed to Heroku is easier than you might think.  You just need a few things to setup and configure to make it happen.
 
 ### Things you will need
 - A Heroku account
 - A new git repo just for your app
+- Favorite beverage of choice
+- Four deep breaths *(reuse at anytime)*
 
 ## Background
 
 Heroku is powerful platform that supports the development, deployment and runing of applications of all shapes and sizes written in Node, Java, PHP, Python and more.  There are pages and pages of documentation, tutorials and getting started guides.
 
-For your application, what is needed for configuration is not complex and only has two config files.  There is a requirements file ```requirements.txt``` and a startup file, know as a ```Procfile``` that tells Heroku how to open your application.
+For your application, what is needed for the configuration is two config files.  There is a requirements file ```requirements.txt``` and a startup file, know as a ```Procfile```. It tells Heroku how to open your application and run it.
 
 The database in the project is SQLite and does not require any configuration or setup in Heroku.
 
-
-The requirements file is included with the starter code in the project but it does need some minor edits.  You will need to update version numbers and be adding **gunicorn**.  This is a webserver that will run your Flask ```app.py``` when deployed to Heroku. The only new file that is needed is the startup Procfile.
+The requirements file is included with the starter code in the project but it does need some minor edits.  You will need to update some version numbers and will be adding **gunicorn**.  This is a webserver that will run your Flask ```app.py``` when it is deployed to Heroku. The only new file is the startup Procfile.
 
 ###### Optional Reading: [Deploying Python Applications with Gunicorn](https://devcenter.heroku.com/articles/python-gunicorn)
 
 ### Update the Requirements.txt
 
-This file tells Heroku all the Python libraries that your app needs to run.  They are called dependencies in this context.  Think of it like Heroku is doing a ```pip install``` for you to run your application.
+This file tells Heroku all the Python libraries that your app needs to run.  They are called dependencies.  Think of it like Heroku is doing a ```pip install``` for you so that your application can run.
 
-Find your ```requirements.txt``` that is included with the starter code and update.  Hint: ****copy & paste****
+Find the ```requirements.txt``` that is included with the starter code and update.  Hint: ****copy & paste****
 
 ```
 Click==7.0
@@ -58,6 +59,8 @@ web: gunicorn app:app
 
 Create a new repo your application.  Later you will hook this repo to your Heroku app.  Have all the files and folders at the base or root folder.
 
+Follow this layout for your files and folders.  This is key for a successfull deployment.
+
 ```
 new-git-repo-name
 ├── app.py
@@ -73,7 +76,7 @@ new-git-repo-name
      └── index.html
 ```
 
-When your are happy with you app and ready to deploy then push your code to github.
+When your are happy with you app and ready to deploy then push your code to GitHub.
 
 ## Heroku Dashboard
 
@@ -99,7 +102,9 @@ Heroku will find your repo and then click on "Connect"
 
 ### Deploy
 
-Now you ready to deploy your application.  This will take a minute or two and you can watch Heroku working.
+Now you ready to deploy your application.  This will take a minute or two and you can watch Heroku working.  
+
+You can even setup automatic deployment if you with so when you make changes and push them to GitHub, Heroku  will automatically deploy your app.  Get comfortable with manual deploys first before trying automatic ones.
 
 ![](03-to-heroku.png)
 
@@ -119,5 +124,5 @@ If you want to make any changes ...
 - Update your code
 - Test locally
 - Add/Commit to your repo
-- Push to Github
+- Push to GitHub
 - Reploy in Heroku
